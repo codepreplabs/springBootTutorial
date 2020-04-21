@@ -1,6 +1,6 @@
 package com.codeprep.app.controller;
 
-import com.codeprep.app.io.Topic;
+import com.codeprep.app.io.TopicDTO;
 import com.codeprep.app.service.TopicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -14,23 +14,23 @@ public class TopicsController {
     private TopicService topicService;
 
     @GetMapping
-    public List<Topic> getTopics(){
-        return  topicService.getTopics();
+    public List<TopicDTO> getTopics(){
+        return  topicService.getTopicDTOS();
     }
 
     @GetMapping("/{id}")
-    public Topic getTopic(@PathVariable Long id){
+    public TopicDTO getTopic(@PathVariable Long id){
         return topicService.getTopic(id);
     }
 
     @PutMapping
-    public void addTopic(@RequestBody  List<Topic> topics){
-        topicService.addTopic(topics);
+    public void addTopic(@RequestBody  List<TopicDTO> topicDTOS){
+        topicService.addTopic(topicDTOS);
     }
 
     @PostMapping
-    public void updateTopic(@RequestBody List<Topic> topics){
-        topicService.updateTopic(topics);
+    public void updateTopic(@RequestBody List<TopicDTO> topicDTOS){
+        topicService.updateTopic(topicDTOS);
     }
 
     @DeleteMapping("/{id}")

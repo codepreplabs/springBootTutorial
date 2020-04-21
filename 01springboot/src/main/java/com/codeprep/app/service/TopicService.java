@@ -1,18 +1,18 @@
 package com.codeprep.app.service;
 
-import com.codeprep.app.io.Topic;
+import com.codeprep.app.io.TopicDTO;
 
 import java.util.List;
 
 public interface TopicService {
 
-    public List<Topic> getTopics();
+    public List<TopicDTO> getTopicDTOS();
 
-    public Topic getTopic(Long id);
+    public TopicDTO getTopic(Long id);
 
-    public void addTopic(List<Topic> topics);
+    public void addTopic(List<TopicDTO> topicDTOS);
 
-    public void updateTopic(List<Topic> topics);
+    public void updateTopic(List<TopicDTO> topicDTOS);
 
     public void deleteTopic(Long id);
 }

@@ -1,15 +1,15 @@
 package com.codeprep.app.io;
 
-public class Topic {
+public class TopicDTO {
 
     private Long id;
     private String name;
     private String description;
 
-    public Topic() {
+    public TopicDTO() {
     }
 
-    public Topic(Long id, String name, String description) {
+    public TopicDTO(Long id, String name, String description) {
         this.id = id;
         this.name = name;
         this.description = description;
